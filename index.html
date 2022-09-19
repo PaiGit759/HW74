@@ -1,0 +1,79 @@
+<! DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+        <title>HW74</title>
+
+        <style type="text/css">
+            body {
+                background-color: rgb(150, 150, 202);
+            }
+
+            .exsample {
+                top: 5%;
+            }
+
+            .exsample1 {
+                top: 28%;
+            }
+
+            .exsample2 {
+                top: 16%;
+            }
+
+
+            .exsample1 {
+                position: relative;
+                left: 20%;
+                top: 50px;
+                width: 40%;
+                padding-top: 5px;
+                padding-left: 10px;
+                padding-bottom: 10px;
+                font-size: x-large;
+                margin-top: 5px;
+                text-align: justify;
+            }
+
+            .p1 {
+            
+                padding-top: 5px;
+                padding-left: 10px;
+                padding-bottom: 10px;
+                padding-right: 10px;
+                font-size: x-large;
+                margin-top: 5px;
+                border: 1px solid greenyellow;
+                border-radius: 3%;
+            }
+
+        </style>
+
+        <script type="text/javascript">
+
+            async function onClicBtn1() {
+
+                let url = 'https://catfact.ninja/fact';
+                let response = await fetch(url); 
+                let commits = await response.json(); 
+                outtext = commits.fact;
+                document.getElementById("outText").innerHTML = "&nbsp;&nbsp;&nbsp;" + commits.fact;
+            }
+        </script>
+
+    </head>
+
+    <body>
+        <span style="font-size: x-large;">To receive a server response, click on the "Send request" button</span>
+        <br>
+        <button id="btn1" onclick="onClicBtn1()">Send request</button>
+
+        <div class="exsample1" id="formForOutPut" )>
+            <p id="outText" class="p1" </p>
+        </div>
+
+    </body>
+
+    </html>
